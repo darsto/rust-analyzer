@@ -1356,6 +1356,7 @@ impl<'db> SemanticsImpl<'db> {
     }
 
     pub fn resolve_macro_call(&self, macro_call: &ast::MacroCall) -> Option<Macro> {
+        return None;
         let macro_call = self.find_file(macro_call.syntax()).with_value(macro_call);
         self.with_ctx(|ctx| {
             ctx.macro_call_to_macro_call(macro_call)
